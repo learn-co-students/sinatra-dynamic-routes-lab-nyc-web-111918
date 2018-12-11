@@ -1,0 +1,6 @@
+
+<%# math = operators.each {|op| [@num "#{op} @num2", @num1.send(op, @num2)].join} %>
+<%# math = @num1.send(operators, @num2) %>
+<% op = ["+","-","/","*"] %>
+<% operators = op.map{|o| @num1.send o, @num2} %>
+<%= operators %>
